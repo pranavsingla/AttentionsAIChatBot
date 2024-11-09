@@ -1,0 +1,9 @@
+# Ignore the env directory
+env/
+
+# Ignore all __pycache__ directories
+**/__pycache__/
+
+# Optional: Add other common ignores
+*.log
+*.pkl

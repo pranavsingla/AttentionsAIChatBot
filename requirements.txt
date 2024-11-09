@@ -1,0 +1,10 @@
+torch
+torchvision
+fastapi
+uvicorn
+neo4j
+streamlit
+requests
+transformers
+accelerate
+geopy
