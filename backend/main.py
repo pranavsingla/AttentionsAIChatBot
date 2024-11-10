@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from backend.routers import itinerary, preferences
+from backend.routers import itinerary, preferences, auth
 from backend.services.llm_agent import LLM
 
 app = FastAPI()
@@ -11,6 +11,7 @@ app = FastAPI()
 
 app.include_router(itinerary.router)
 app.include_router(preferences.router)
+app.include_router(auth.router)  # Include auth router
 
 @app.get("/")
 def read_root():
