@@ -8,3 +8,4 @@ requests
 transformers
 accelerate
 geopy
+py2neo

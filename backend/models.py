@@ -1,4 +1,5 @@
 from pydantic import BaseModel
+from typing import List, Optional
 
 class Preferences(BaseModel):
     city: str
@@ -16,3 +17,13 @@ class Itinerary(BaseModel):
     lunch_spot: str
     weather: str
     map_url: str
+
+class User(BaseModel):
+    username: str
+    password: str  # Later can be replaced with hash passwords in a real app
+    email: Optional[str] = None
+    history: Optional[List[dict]] = []  # Store user's itinerary history here
+
+class ItineraryRequest(BaseModel):
+    username: str
+    preferences: Preferences
